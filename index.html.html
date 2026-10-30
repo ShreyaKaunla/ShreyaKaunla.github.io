@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shreya Kaunla – Full-Stack AI Engineer</title>
+<style>
+:root{--bg:#eef1f8;--card:#fff;--ink:#14162e;--muted:#565a7a;--line:#d5d9ea;--a:#e0365c;--b:#0b8a7c;--bar:#14162e;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101226;--card:#191c38;--ink:#eceefb;--muted:#9da2c8;--line:#2b2f55;--a:#ff6d8d;--b:#3fd0bd;--bar:#eceefb;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101226;--card:#191c38;--ink:#eceefb;--muted:#9da2c8;--line:#2b2f55;--a:#ff6d8d;--b:#3fd0bd;--bar:#eceefb;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Avenir Next","Segoe UI",system-ui,sans-serif}
+a{color:inherit}
+.wrap{max-width:860px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:Georgia,"Iowan Old Style","Times New Roman",serif;font-weight:700;line-height:1.1;margin:0}
+h1{font-size:clamp(3rem,11vw,6.2rem);letter-spacing:-.03em}
+h2{font-size:1.9rem;margin-bottom:6px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.top nav{display:flex;gap:18px;font-size:.95rem}
+.top a{text-decoration:none;color:var(--muted)}
+.top a:hover{color:var(--ink)}
+button{font:inherit;color:inherit;cursor:pointer}
+.theme{background:none;border:1px solid var(--line);border-radius:99px;padding:4px 12px;color:var(--muted)}
+:focus-visible{outline:3px solid var(--b);outline-offset:3px;border-radius:6px}
+.hero{padding:40px 0 30px}
+.hero p.lead{font-size:1.3rem;max-width:30em;margin:18px 0 0}
+.hero p.sub{color:var(--muted);max-width:36em;margin:10px 0 0}
+#wave{display:flex;align-items:center;gap:3px;height:120px;margin:34px 0 8px;touch-action:none;cursor:crosshair}
+#wave i{flex:1;min-width:2px;background:var(--bar);border-radius:3px;opacity:.85;transition:background .2s}
+#wave i.on{background:var(--a);opacity:1}
+.scrub{display:flex;justify-content:space-between;color:var(--muted);font-size:.85rem}
+section{padding:46px 0 10px}
+.intro{color:var(--muted);margin:0 0 20px;max-width:38em}
+.track{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.track>summary{list-style:none;display:grid;grid-template-columns:34px 1fr auto;gap:14px;align-items:center;padding:16px 18px;cursor:pointer}
+.track>summary::-webkit-details-marker{display:none}
+.play{width:34px;height:34px;border-radius:50%;background:var(--a);display:grid;place-items:center}
+.play:before{content:"";border-left:11px solid #fff;border-top:7px solid transparent;border-bottom:7px solid transparent;margin-left:3px}
+.track[open] .play:before{border:0;width:11px;height:12px;margin:0;border-left:4px solid #fff;border-right:4px solid #fff}
+.track h3{font-size:1.3rem}
+.tag{color:var(--muted);font-size:.9rem}
+.stack{font-size:.85rem;color:var(--muted);text-align:right;max-width:14em}
+.prog{height:3px;background:var(--line)}
+.prog b{display:block;height:100%;width:0;background:var(--b)}
+.track[open] .prog b{width:100%;transition:width 1.6s ease-out}
+.body{padding:16px 20px 20px}
+.body ul{margin:0 0 14px;padding-left:20px}
+.body li{margin-bottom:8px}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 14px}
+.stats span{border:1px solid var(--line);border-radius:10px;padding:6px 12px;font-size:.92rem}
+.stats strong{color:var(--b)}
+.links a{margin-right:16px;color:var(--a);font-weight:600}
+.vault{background:var(--bg);border:1px dashed var(--b);border-radius:10px;padding:14px 16px;margin:0 0 14px}
+.vault code{display:block;word-break:break-all;font:.85rem/1.5 ui-monospace,Consolas,monospace;color:var(--muted);min-height:3em}
+.vault button{margin-top:10px;background:var(--b);color:#fff;border:0;border-radius:8px;padding:7px 14px;font-weight:600}
+.vault button[disabled]{opacity:.6;cursor:default}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}
+.skills div{border-top:3px solid var(--b);padding-top:8px}
+.skills h3{font-size:1.05rem;margin-bottom:4px}
+.skills p{margin:0;color:var(--muted);font-size:.95rem}
+footer{padding:50px 0 60px}
+.mail{display:inline-block;font:700 clamp(1.4rem,5vw,2.2rem)/1.2 Georgia,serif;text-decoration-color:var(--a);text-underline-offset:6px}
+.note{color:var(--muted);font-size:.9rem;margin-top:22px}
+@media (max-width:560px){.track>summary{grid-template-columns:34px 1fr}.stack{grid-column:2;text-align:left;max-width:none}.top nav{display:none}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.track[open] .prog b{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><strong>Shreya Kaunla</strong>
+<nav aria-label="Sections"><a href="#tracks">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+<button class="theme" id="theme" type="button" aria-label="Switch colour theme">Theme</button></header>
+
+<main>
+<div class="hero">
+<h1>Shreya Kaunla</h1>
+<p class="lead">I build full-stack products that listen, learn and keep secrets.</p>
+<p class="sub">B.Tech Computer Science student in New Delhi. React on the front, FastAPI and Node.js behind it, machine learning where it earns its place. Looking for a Software Development Engineer internship.</p>
+<div id="wave" role="img" aria-label="Interactive audio waveform. Move your pointer across it."></div>
+<div class="scrub"><span>Move across the waveform</span><span>Now playing: my projects</span></div>
+</div>
+
+<section id="tracks">
+<h2>Projects</h2>
+<p class="intro">Each project is a track. Open one to hear how it works.</p>
+
+<details class="track" open>
+<summary><span class="play" aria-hidden="true"></span><span><h3>MusicHub</h3><span class="tag">A music player that learns what you like</span></span><span class="stack">React, FastAPI, SQLite, NumPy, PyTorch, Docker</span></summary>
+<div class="prog" aria-hidden="true"><b></b></div>
+<div class="body">
+<div class="stats"><span><strong>0.319</strong> Precision@5 with CLAP embeddings</span><span><strong>0.240</strong> hand-built mel baseline</span><span><strong>0.137</strong> random</span></div>
+<ul>
+<li>Streams audio with seeking and keeps an endless “similar songs” queue, plus Daily Mixes, likes and playlists.</li>
+<li>Swapped my own spectrogram fingerprint for pretrained CLAP embeddings and measured the gain on 1,028 songs, excluding same-artist matches so the score stays honest.</li>
+<li>Learns from plays, skips and likes with a 14-day memory. A logistic-regression ranker only goes live if it beats the defaults on a time-split holdout.</li>
+<li>Heavy work runs offline. The hosted server does NumPy lookups only, and every visitor’s data stays separate.</li>
+</ul>
+<p class="links"><a href="https://music-hub-demo.vercel.app/">Try the live demo</a><a href="https://github.com/ShreyaKaunla/Music-Recommender">Source on GitHub</a></p>
+</div>
+</details>
+
+<details class="track">
+<summary><span class="play" aria-hidden="true"></span><span><h3>Eligify</h3><span class="tag">Find the welfare schemes you qualify for, privately</span></span><span class="stack">React, Node.js, Python, SQLite, PostgreSQL, Web Crypto, LLM API</span></summary>
+<div class="prog" aria-hidden="true"><b></b></div>
+<div class="body">
+<div class="vault"><span class="tag">A citizen’s profile as the server would ever see it:</span>
+<code id="cipher" aria-live="polite">vault locked</code>
+<button type="button" id="unlock">Unlock with password</button></div>
+<div class="stats"><span><strong>3,400+</strong> schemes checked</span><span><strong>14/14</strong> vault tests pass</span><span><strong>600,000</strong> PBKDF2 iterations</span><span><strong>12</strong> pipeline unit tests</span></div>
+<ul>
+<li>A deterministic rule engine checks a profile against every scheme and states the exact reason for each rejection, with a link to the official portal.</li>
+<li>Profiles are encrypted in the browser (AES-256-GCM). Lose the password and the recovery key, and the data is gone by design.</li>
+<li>OCR runs on the device, so document photos never reach a server. Only the last 4 Aadhaar digits are kept.</li>
+<li>A Python pipeline keeps the catalogue fresh: it fetches new and changed schemes from the ApiMitra API, has an LLM extract each eligibility rule with the exact source quote, runs automatic checks, and sends anything doubtful to a human reviewer before it reaches the app. It has 12 unit tests, including a mock API server.</li>
+<li>PostgreSQL row-level security policies and an isolation test suite keep one citizen’s rows away from another’s.</li>
+</ul>
+<p class="links"><a href="https://github.com/ShreyaKaunla">Source on GitHub</a></p>
+</div>
+</details>
+
+<details class="track">
+<summary><span class="play" aria-hidden="true"></span><span><h3>Retro Game Arcade</h3><span class="tag">Mini-games in plain JavaScript</span></span><span class="stack">HTML5, CSS3, JavaScript</span></summary>
+<div class="prog" aria-hidden="true"><b></b></div>
+<div class="body"><ul><li>Several browser games with modular ES6 code for game loops and state, saved profiles and high scores, and a layout that adapts to any screen.</li></ul></div>
+</details>
+
+<details class="track">
+<summary><span class="play" aria-hidden="true"></span><span><h3>Hospital Management System</h3><span class="tag">A relational database done carefully</span></span><span class="stack">Python, MySQL</span></summary>
+<div class="prog" aria-hidden="true"><b></b></div>
+<div class="body"><ul><li>Schema with keys, indexes and foreign keys, a Python service layer that validates input, and joins, views and aggregates for fast reporting.</li></ul></div>
+</details>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills">
+<div><h3>Frontend</h3><p>React, Vite, Tailwind CSS, JavaScript (ES6+), responsive design</p></div>
+<div><h3>Backend</h3><p>FastAPI, Node.js, REST APIs, SQL, SQLite, PostgreSQL, MySQL</p></div>
+<div><h3>AI and data</h3><p>Audio embeddings, recommender systems, LLM data pipelines, K-Means, NumPy, Pandas, scikit-learn, PyTorch, OCR</p></div>
+<div><h3>Practice</h3><p>Docker, Git, automated tests, data structures and algorithms, Python, C/C++</p></div>
+</div>
+</section>
+</main>
+
+<footer id="contact">
+<h2>Say hello</h2>
+<a class="mail" href="mailto:shreyakaunla@gmail.com">shreyakaunla@gmail.com</a>
+<p><a href="https://github.com/ShreyaKaunla">github.com/ShreyaKaunla</a></p>
+<p class="note">Music in the MusicHub demo comes from Pixabay and stays with its artists.</p>
+</footer>
+</div>
+
+<script>
+(function(){
+var reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+var root=document.documentElement,tb=document.getElementById('theme');
+tb.onclick=function(){var dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme: dark)').matches;root.dataset.theme=dark?'light':'dark'};
+
+var wave=document.getElementById('wave'),N=64,bars=[],mx=-1;
+for(var i=0;i<N;i++){var b=document.createElement('i');wave.appendChild(b);bars.push(b)}
+function draw(t){
+  for(var i=0;i<N;i++){
+    var x=i/N,h=.28+.22*Math.sin(x*9+t)+.16*Math.sin(x*23-t*1.7)+.1*Math.sin(x*41+t*2.3);
+    var d=mx<0?9:Math.abs(x-mx)*N;
+    if(d<8)h+=(1-d/8)*.45;
+    bars[i].style.height=Math.max(6,Math.min(100,h*100))+'%';
+    bars[i].classList.toggle('on',d<3);
+  }
+}
+var t0=0;
+function loop(){t0+=.02;draw(t0);if(!reduce)requestAnimationFrame(loop)}
+function move(e){var r=wave.getBoundingClientRect();mx=(e.clientX-r.left)/r.width;if(reduce)draw(t0)}
+wave.addEventListener('pointermove',move);
+wave.addEventListener('pointerleave',function(){mx=-1;if(reduce)draw(t0)});
+loop();
+
+var cipher=document.getElementById('cipher'),btn=document.getElementById('unlock'),G='0123456789abcdef';
+var plain='Sample data | Name: Asha K. | State: Odisha | Income: ₹65,000 | Category: OBC | Result: 41 schemes matched';
+function rnd(n){var s='';for(var i=0;i<n;i++)s+=G[Math.floor(Math.random()*16)];return s}
+function lock(){cipher.textContent='AES-GCM '+rnd(88);btn.disabled=false;btn.textContent='Unlock with password'}
+lock();
+btn.onclick=function(){
+  btn.disabled=true;btn.textContent='Unlocked in your browser only';
+  if(reduce){cipher.textContent=plain;return}
+  var n=0,id=setInterval(function(){
+    n+=2;
+    cipher.textContent=plain.slice(0,n)+rnd(Math.max(0,plain.length-n));
+    if(n>=plain.length){clearInterval(id);cipher.textContent=plain}
+  },30);
+};
+})();
+</script>
+</body>
+</html>
